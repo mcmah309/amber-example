@@ -1,0 +1,12 @@
+unsafe $set -xeo pipefail$
+
+fun test_func(string: Text): Text {
+    if string == "Dave" {
+        return string + " Davidson"
+    }
+    return string + " Johnson";
+}
+
+let x = "Dave";
+let x = test_func(x);
+echo "My name is {x}";
